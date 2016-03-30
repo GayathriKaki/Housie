@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HousieModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HousieModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="HousieModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_tickets" EntityType="HousieModel.Store.tb_tickets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_customers" EntityType="HousieModel.Store.tbl_customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_gamemaster" EntityType="HousieModel.Store.tbl_gamemaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_gameplay" EntityType="HousieModel.Store.tbl_gameplay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_games" EntityType="HousieModel.Store.tbl_games" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_picknumber" EntityType="HousieModel.Store.tbl_picknumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_winner" EntityType="HousieModel.Store.tbl_winner" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tbl_gameplay_tb_tickets" Association="HousieModel.Store.FK_tbl_gameplay_tb_tickets">
+      <End Role="tb_tickets" EntitySet="tb_tickets" />
+      <End Role="tbl_gameplay" EntitySet="tbl_gameplay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_gameplay_tbl_gamemaster" Association="HousieModel.Store.FK_tbl_gameplay_tbl_gamemaster">
+      <End Role="tbl_gamemaster" EntitySet="tbl_gamemaster" />
+      <End Role="tbl_gameplay" EntitySet="tbl_gameplay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_games_tb_tickets" Association="HousieModel.Store.FK_tbl_games_tb_tickets">
+      <End Role="tb_tickets" EntitySet="tb_tickets" />
+      <End Role="tbl_games" EntitySet="tbl_games" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_games_tbl_customers" Association="HousieModel.Store.FK_tbl_games_tbl_customers">
+      <End Role="tbl_customers" EntitySet="tbl_customers" />
+      <End Role="tbl_games" EntitySet="tbl_games" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_games_tbl_gamemaster" Association="HousieModel.Store.FK_tbl_games_tbl_gamemaster">
+      <End Role="tbl_gamemaster" EntitySet="tbl_gamemaster" />
+      <End Role="tbl_games" EntitySet="tbl_games" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_picknumber_tbl_gamemaster" Association="HousieModel.Store.FK_tbl_picknumber_tbl_gamemaster">
+      <End Role="tbl_gamemaster" EntitySet="tbl_gamemaster" />
+      <End Role="tbl_picknumber" EntitySet="tbl_picknumber" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_winner_tb_tickets" Association="HousieModel.Store.FK_tbl_winner_tb_tickets">
+      <End Role="tb_tickets" EntitySet="tb_tickets" />
+      <End Role="tbl_winner" EntitySet="tbl_winner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_winner_tbl_gamemaster" Association="HousieModel.Store.FK_tbl_winner_tbl_gamemaster">
+      <End Role="tbl_gamemaster" EntitySet="tbl_gamemaster" />
+      <End Role="tbl_winner" EntitySet="tbl_winner" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tb_tickets">
+    <Key>
+      <PropertyRef Name="ticketId" />
+    </Key>
+    <Property Name="ticketId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="R1C1" Type="int" />
+    <Property Name="R1C2" Type="int" />
+    <Property Name="R1C3" Type="int" />
+    <Property Name="R1C4" Type="int" />
+    <Property Name="R1C5" Type="int" />
+    <Property Name="R1C6" Type="int" />
+    <Property Name="R1C7" Type="int" />
+    <Property Name="R1C8" Type="int" />
+    <Property Name="R1C9" Type="int" />
+    <Property Name="R2C1" Type="int" />
+    <Property Name="R2C2" Type="int" />
+    <Property Name="R2C3" Type="int" />
+    <Property Name="R2C4" Type="int" />
+    <Property Name="R2C5" Type="int" />
+    <Property Name="R2C6" Type="int" />
+    <Property Name="R2C7" Type="int" />
+    <Property Name="R2C8" Type="int" />
+    <Property Name="R2C9" Type="int" />
+    <Property Name="R3C1" Type="int" />
+    <Property Name="R3C2" Type="int" />
+    <Property Name="R3C3" Type="int" />
+    <Property Name="R3C4" Type="int" />
+    <Property Name="R3C5" Type="int" />
+    <Property Name="R3C6" Type="int" />
+    <Property Name="R3C7" Type="int" />
+    <Property Name="R3C8" Type="int" />
+    <Property Name="R3C9" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_customers">
+    <Key>
+      <PropertyRef Name="custId" />
+    </Key>
+    <Property Name="custId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" />
+    <Property Name="firstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="paypal_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="facebookLink" Type="nvarchar" MaxLength="50" />
+    <Property Name="bool_emailstatus" Type="bit" />
+    <Property Name="dateTImestamp" Type="datetime" />
+    <Property Name="phoneNum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_gamemaster">
+    <Key>
+      <PropertyRef Name="gameId" />
+    </Key>
+    <Property Name="gameId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="start_dateTime" Type="datetime" />
+    <Property Name="is_completed" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_gameplay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gameId" Type="int" Nullable="false" />
+    <Property Name="ticketId" Type="int" Nullable="false" />
+    <Property Name="pick_number" Type="int" />
+    <Property Name="rowcellnumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_games">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gameId" Type="int" Nullable="false" />
+    <Property Name="custId" Type="int" Nullable="false" />
+    <Property Name="ticketid" Type="int" Nullable="false" />
+    <Property Name="datetimestamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_picknumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gameId" Type="int" Nullable="false" />
+    <Property Name="pick_number" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_winner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gameId" Type="int" Nullable="false" />
+    <Property Name="ticketId" Type="int" Nullable="false" />
+    <Property Name="winnerType" Type="nvarchar" MaxLength="100" />
+    <Property Name="is_transaction_complete" Type="bit" />
+  </EntityType>
+  <Association Name="FK_tbl_gameplay_tb_tickets">
+    <End Role="tb_tickets" Type="HousieModel.Store.tb_tickets" Multiplicity="1" />
+    <End Role="tbl_gameplay" Type="HousieModel.Store.tbl_gameplay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tickets">
+        <PropertyRef Name="ticketId" />
+      </Principal>
+      <Dependent Role="tbl_gameplay">
+        <PropertyRef Name="ticketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_gameplay_tbl_gamemaster">
+    <End Role="tbl_gamemaster" Type="HousieModel.Store.tbl_gamemaster" Multiplicity="1" />
+    <End Role="tbl_gameplay" Type="HousieModel.Store.tbl_gameplay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_gamemaster">
+        <PropertyRef Name="gameId" />
+      </Principal>
+      <Dependent Role="tbl_gameplay">
+        <PropertyRef Name="gameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_games_tb_tickets">
+    <End Role="tb_tickets" Type="HousieModel.Store.tb_tickets" Multiplicity="1" />
+    <End Role="tbl_games" Type="HousieModel.Store.tbl_games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tickets">
+        <PropertyRef Name="ticketId" />
+      </Principal>
+      <Dependent Role="tbl_games">
+        <PropertyRef Name="ticketid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_games_tbl_customers">
+    <End Role="tbl_customers" Type="HousieModel.Store.tbl_customers" Multiplicity="1" />
+    <End Role="tbl_games" Type="HousieModel.Store.tbl_games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_customers">
+        <PropertyRef Name="custId" />
+      </Principal>
+      <Dependent Role="tbl_games">
+        <PropertyRef Name="custId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_games_tbl_gamemaster">
+    <End Role="tbl_gamemaster" Type="HousieModel.Store.tbl_gamemaster" Multiplicity="1" />
+    <End Role="tbl_games" Type="HousieModel.Store.tbl_games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_gamemaster">
+        <PropertyRef Name="gameId" />
+      </Principal>
+      <Dependent Role="tbl_games">
+        <PropertyRef Name="gameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_picknumber_tbl_gamemaster">
+    <End Role="tbl_gamemaster" Type="HousieModel.Store.tbl_gamemaster" Multiplicity="1" />
+    <End Role="tbl_picknumber" Type="HousieModel.Store.tbl_picknumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_gamemaster">
+        <PropertyRef Name="gameId" />
+      </Principal>
+      <Dependent Role="tbl_picknumber">
+        <PropertyRef Name="gameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_winner_tb_tickets">
+    <End Role="tb_tickets" Type="HousieModel.Store.tb_tickets" Multiplicity="1" />
+    <End Role="tbl_winner" Type="HousieModel.Store.tbl_winner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tickets">
+        <PropertyRef Name="ticketId" />
+      </Principal>
+      <Dependent Role="tbl_winner">
+        <PropertyRef Name="ticketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_winner_tbl_gamemaster">
+    <End Role="tbl_gamemaster" Type="HousieModel.Store.tbl_gamemaster" Multiplicity="1" />
+    <End Role="tbl_winner" Type="HousieModel.Store.tbl_winner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_gamemaster">
+        <PropertyRef Name="gameId" />
+      </Principal>
+      <Dependent Role="tbl_winner">
+        <PropertyRef Name="gameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

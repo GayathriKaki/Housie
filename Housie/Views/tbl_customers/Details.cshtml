@@ -1,0 +1,114 @@
+﻿@model Housie.Models.tbl_customers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>tbl_customers</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.firstName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.firstName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.lastName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.lastName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.paypal_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.paypal_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.country)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.country)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.facebookLink)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.facebookLink)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.bool_emailstatus)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.bool_emailstatus)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dateTImestamp)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dateTImestamp)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.phoneNum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.phoneNum)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.custId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

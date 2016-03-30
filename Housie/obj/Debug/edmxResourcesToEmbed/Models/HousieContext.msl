@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HousieModelStoreContainer" CdmEntityContainer="db_housieEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="HousieModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tickets">
+      <EntityTypeMapping TypeName="HousieModel.tb_tickets">
+        <MappingFragment StoreEntitySet="tb_tickets">
+          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+          <ScalarProperty Name="R1C1" ColumnName="R1C1" />
+          <ScalarProperty Name="R1C2" ColumnName="R1C2" />
+          <ScalarProperty Name="R1C3" ColumnName="R1C3" />
+          <ScalarProperty Name="R1C4" ColumnName="R1C4" />
+          <ScalarProperty Name="R1C5" ColumnName="R1C5" />
+          <ScalarProperty Name="R1C6" ColumnName="R1C6" />
+          <ScalarProperty Name="R1C7" ColumnName="R1C7" />
+          <ScalarProperty Name="R1C8" ColumnName="R1C8" />
+          <ScalarProperty Name="R1C9" ColumnName="R1C9" />
+          <ScalarProperty Name="R2C1" ColumnName="R2C1" />
+          <ScalarProperty Name="R2C2" ColumnName="R2C2" />
+          <ScalarProperty Name="R2C3" ColumnName="R2C3" />
+          <ScalarProperty Name="R2C4" ColumnName="R2C4" />
+          <ScalarProperty Name="R2C5" ColumnName="R2C5" />
+          <ScalarProperty Name="R2C6" ColumnName="R2C6" />
+          <ScalarProperty Name="R2C7" ColumnName="R2C7" />
+          <ScalarProperty Name="R2C8" ColumnName="R2C8" />
+          <ScalarProperty Name="R2C9" ColumnName="R2C9" />
+          <ScalarProperty Name="R3C1" ColumnName="R3C1" />
+          <ScalarProperty Name="R3C2" ColumnName="R3C2" />
+          <ScalarProperty Name="R3C3" ColumnName="R3C3" />
+          <ScalarProperty Name="R3C4" ColumnName="R3C4" />
+          <ScalarProperty Name="R3C5" ColumnName="R3C5" />
+          <ScalarProperty Name="R3C6" ColumnName="R3C6" />
+          <ScalarProperty Name="R3C7" ColumnName="R3C7" />
+          <ScalarProperty Name="R3C8" ColumnName="R3C8" />
+          <ScalarProperty Name="R3C9" ColumnName="R3C9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_customers">
+      <EntityTypeMapping TypeName="HousieModel.tbl_customers">
+        <MappingFragment StoreEntitySet="tbl_customers">
+          <ScalarProperty Name="custId" ColumnName="custId" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="paypal_id" ColumnName="paypal_id" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="facebookLink" ColumnName="facebookLink" />
+          <ScalarProperty Name="bool_emailstatus" ColumnName="bool_emailstatus" />
+          <ScalarProperty Name="dateTImestamp" ColumnName="dateTImestamp" />
+          <ScalarProperty Name="phoneNum" ColumnName="phoneNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_gamemaster">
+      <EntityTypeMapping TypeName="HousieModel.tbl_gamemaster">
+        <MappingFragment StoreEntitySet="tbl_gamemaster">
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="start_dateTime" ColumnName="start_dateTime" />
+          <ScalarProperty Name="is_completed" ColumnName="is_completed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_gameplay">
+      <EntityTypeMapping TypeName="HousieModel.tbl_gameplay">
+        <MappingFragment StoreEntitySet="tbl_gameplay">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+          <ScalarProperty Name="pick_number" ColumnName="pick_number" />
+          <ScalarProperty Name="rowcellnumber" ColumnName="rowcellnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_games">
+      <EntityTypeMapping TypeName="HousieModel.tbl_games">
+        <MappingFragment StoreEntitySet="tbl_games">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="custId" ColumnName="custId" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+          <ScalarProperty Name="datetimestamp" ColumnName="datetimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_picknumber">
+      <EntityTypeMapping TypeName="HousieModel.tbl_picknumber">
+        <MappingFragment StoreEntitySet="tbl_picknumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="pick_number" ColumnName="pick_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_winner">
+      <EntityTypeMapping TypeName="HousieModel.tbl_winner">
+        <MappingFragment StoreEntitySet="tbl_winner">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gameId" ColumnName="gameId" />
+          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+          <ScalarProperty Name="winnerType" ColumnName="winnerType" />
+          <ScalarProperty Name="is_transaction_complete" ColumnName="is_transaction_complete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

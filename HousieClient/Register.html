@@ -1,0 +1,34 @@
+<div  ng-controller="customerController">
+ 
+        <!--<div ng-repeat="customer in customersdata">-->
+    <form name="customerform" ng-submit="submit()" method="post">
+        <table width="396" border="0">
+            <tr>
+                <td width="386"><span class="FormHeaderText">{{message}}</span></td>
+
+            </tr>
+            <tr>
+
+                <td><input name="txtFirstName" ng-model="customersdata.firstName"  placeholder="Enter your First Name"  required type="text" class="textboxsmall" width="150" />&nbsp;
+                    <span ng-show="submitted && customerform.txtFirstName.$error.required">First name is required</span><input name="txtLastname" type="text" class="textboxsmall" placeholder="Enter your Last Name" ng-model="customersdata.lastName" width="147" /></td>
+            </tr>
+            <tr>
+                <td><input name="txtEmail" type="email" ng-model="customersdata.email"   required placeholder="Enter Your Email" class="textboxbig" width="300" />&nbsp;
+                    <span ng-show="submitted && customerform.txtEmail.$error.email">Enter Valid Email</span>&nbsp;<span ng-show="submitted && customerform.txtEmail.$error.required">Enter  Email</span></td>
+
+            </tr>
+            <tr>
+                <td><input name="txtPassword" type="password" ng-model="customersdata.password" required placeholder="Create a Password" class="textboxbig" value="New Password" width="300" />&nbsp;
+                    <span ng-show="submitted && customerform.txtPassword.$error.required">Password is required</span></td>
+
+            </tr>
+           
+            <tr>
+                <td><input name="btnSubmit"  class="btn btn-primary"    type="submit" id="btnSubmit" ng-click="submitted=true"  value="Submit" /></td>
+
+            </tr>
+        </table>
+       
+    </form>
+  
+</div>

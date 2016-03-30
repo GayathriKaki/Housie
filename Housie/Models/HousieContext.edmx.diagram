@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8096897d5b6b404092991b09a69fa248" Name="Diagram1">
+        <EntityTypeShape EntityType="HousieModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tb_tickets" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tbl_customers" Width="1.5" PointX="3.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tbl_gamemaster" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tbl_gameplay" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tbl_games" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tbl_picknumber" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousieModel.tbl_winner" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="HousieModel.FK_tbl_gameplay_tb_tickets" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_games_tb_tickets" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_winner_tb_tickets" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_games_tbl_customers" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_gameplay_tbl_gamemaster" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_games_tbl_gamemaster" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_picknumber_tbl_gamemaster" ManuallyRouted="false" />
+        <AssociationConnector Association="HousieModel.FK_tbl_winner_tbl_gamemaster" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

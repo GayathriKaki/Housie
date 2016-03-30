@@ -1,0 +1,326 @@
+/**
+ * @desc The stylesheet for the light (default) app theme
+ * @author Navdeep
+ */
+
+body {
+	background: url(/img/bg-body.gif) repeat center top;
+	color: #a47c50;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	min-width: 960px;
+	padding: 0;
+}
+
+a {
+	color: #83af9b;
+}
+img {
+	border: 0;
+}
+
+
+p a:hover,
+#body div div ul li a:hover,
+#body div div#blog ul li ul li a:hover {
+	color: #83450e;
+	text-decoration: underline;
+}
+#header {
+	height: 195px;
+	margin: 0 auto 20px;
+	width: 960px;
+}
+#header a {
+	display: inline-block;
+}
+#header div {
+	background: url(/img/bg-navigation.gif) repeat-x;
+	height: 40px;
+	overflow: hidden;
+}
+#header div ul {
+	background: url(/img/bg-navigation-left.gif) no-repeat left top;
+	float: left;
+	height: 39px;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 2px;
+}
+#header div ul li {
+	float: left;
+	margin: 2px 0 0;
+	height: 35px;
+}
+#header div ul li.current:first-child {
+	border-radius: 3px 0 0 3px;
+}
+#header div ul li:first-child,
+#header div ul li.current:first-child a {
+	background: none;
+}
+#header div ul li.current {
+	background: url(/img/bg-menu-selected-right.gif) no-repeat right top;
+}
+#header div ul li.current a {
+	background: url(/img/bg-menu-selected-left.gif) no-repeat left top;
+	color: #f4f2c8;
+}
+#header div ul li a {
+	color: #fffcf4;
+	display: block;
+	font-weight: bold;
+	line-height: 36px;
+	padding: 0 26px;
+	text-shadow: 0 1px #bd4206, 1px 0 #bd4206;
+	text-decoration: none;
+}
+#header div ul li a:hover {
+	color: #f4f2c8;
+}
+#header div form {
+	background: url(/img/bg-navigation-right.gif) no-repeat right top;
+	float: right;
+	height: 39px;
+	padding: 0 10px 0 0;
+	line-height: 39px;
+}
+#header div form input#search {
+	background: #fefffa;
+	border: 1px solid #cd4a14;
+	color: #9b969d;
+	font-style: italic;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	width: 255px;
+}
+#header div form input#searchbtn {
+	background: none;
+	border: 0;
+	color: #fffcf4;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 0 1px #bd4206, 1px 0 #bd4206;
+}
+#body {
+	overflow: hidden;
+	margin: 0 auto 40px;
+	width: 960px;
+}
+#body div {
+	background: #fff;
+	border: 1px solid #e1e1e1;
+	padding: 0 25px 25px;
+	width: 960px;
+}
+#body div h2 {
+	color: #dc3400;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 32px;
+	letter-spacing: 0.025em;
+	line-height: 40px;
+	margin: 0;
+	padding: 20px 0;
+	text-shadow: 1px 0 #fdf9e7;
+}
+
+
+#body div.section {
+	
+	border: 0; background-color:#FFFFFF;
+	min-height: 460px;
+	margin: 60px 0 0;
+	padding: 0; font-size:14px;
+	position: relative;
+	width: 960px;
+}
+#body div.section div {
+	background: none; background-color:#FFFFFF;
+	border-bottom: 0px solid #ddd3a9;
+	border-left: 0px solid #ddd3a9;
+	border-top: 0px solid #ddd3a9;
+	
+	float: left;
+	height: auto;
+	padding: 0 24px;
+	margin: 0;
+	width: 960px;
+}
+
+#footer {
+	margin: 0 auto;
+	width: 958px;
+}
+#footer div {
+	background: #fdfbef;
+	border: 1px solid #ddd3a9;
+	border-radius: 3px;
+	height: 90px;
+}
+#footer div div:first-child {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	float: left;
+	width: 406px;
+}
+#footer div div:first-child img {
+	float: left;
+	margin: -21px 15px 0 0;
+}
+#footer div div h4 {
+	color: #be3c14;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 32px;
+	letter-spacing: 0.025em;
+	line-height: 32px;
+	margin: 15px 0 0;
+	padding: 0 0 0 20px;
+	text-shadow: 1px 0px #e69f75;
+}
+#footer div div {
+	background: #fff;
+	border: 0;
+	border-radius: 0;
+	float: right;
+	height: 90px;
+	width: 549px;
+}
+#footer div div h5 {
+	color: #816b46;
+	font-size: 14px;
+	line-height: 25px;
+	margin: 0;
+	padding: 0 0 5px;
+	text-transform: uppercase;
+}
+#footer div div div h5 {
+	padding: 0 0 2px;
+}
+#footer div div p {
+	color: #794a18;
+	font-size: 17px;
+	letter-spacing: 0.025em;
+	line-height: 30px;
+	margin: 0;
+}
+#footer div form {
+	float: left;
+	margin: 19px 66px 0 20px;
+	overflow: hidden;
+	width: 321px;
+}
+#footer div div form label {
+	background: url(/img/interface.png) no-repeat 0 -55px;
+	display: block;
+	float: left;
+	height: 22px;
+	width: 249px;
+}
+#footer div div form label input#newsletter {
+	background: none;
+	border: 0;
+	color: #9f9f9f;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	height: 20px;
+	letter-spacing: 0.05em;
+	line-height: 20px;
+	margin: 1px 0 0 3px;
+	padding: 0 5px;
+	width: 224px;
+}
+#footer div div form input#subscribe {
+	background:url(/img/interface.png) no-repeat 0 0;
+	border: 0;
+	color: #ffffff;
+	cursor: pointer;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 22px;
+	margin: 0 0 0 -10px;
+	padding: 0 0 2px;
+	width: 72px;
+}
+#footer div div form input#subscribe:hover {
+	background: url(/img/interface.png) no-repeat 0 -22px;
+}
+#footer div div div {
+	border: 0;
+	border-radius: 0;
+	float: left;
+	height: auto;
+	margin: 19px 0 0;
+	width: 121px;
+}
+#footer div div div a {
+	display: block;
+	float: left;
+	text-indent: -999999px;
+}
+#footer div div div a#facebook {
+	background: url(/img/icons.png) no-repeat 0 0;
+	height: 25px;
+	width: 25px;
+}
+#footer div div div a#facebook:hover {
+	background: url(/img/icons.png) no-repeat 0 -25px;
+}
+#footer div div div a#twitter {
+	background: url(/img/icons.png) no-repeat 0 -142px;
+	height: 26px;
+	margin: 0 0 0 14px;
+	width: 38px;
+}
+#footer div div div a#twitter:hover {
+	background: url(/img/icons.png) no-repeat 0 -168px;
+}
+#footer div div div a#googleplus {
+	background: url(/img/icons.png) no-repeat 0 -70px;
+	height: 26px;
+	margin: 0 0 0 18px;
+	width: 26px;
+}
+#footer div div div a#googleplus:hover {
+	background: url(/img/icons.png) no-repeat 0 -96px;
+}
+#footer p.footnote {
+	color: #888888;
+	font-size: 12px;
+	letter-spacing: 0.05em;
+	line-height: 50px;
+	margin: 0;
+	text-align: center;
+	text-shadow: 1px 1px 1px #eeefee;
+}
+
+.board__num--processed {
+	color: white;
+	background: #ff6b6b;
+}
+
+.btn-primary {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #60b044;
+    background-image: -webkit-linear-gradient(#8add6d, #60b044);
+    background-image: linear-gradient(#8add6d, #60b044);
+    border-color: #5ca941;
+}
+.textboxbig
+{
+width:300px; height:30px;
+-webkit-appearance: textfield;
+    background-color: white;
+}
+.textboxsmall
+{
+width:145px; height:30px;
+-webkit-appearance: textfield;
+    background-color: white;
+}

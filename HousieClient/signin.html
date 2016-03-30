@@ -1,0 +1,35 @@
+<div ng-controller="customerController">
+
+  
+    <form name="customerform" ng-submit="Login()" method="post">
+        <table width="450">
+            <tr>
+                <td width="146">Email</td>
+                <td width="167">Password</td>
+                <td width="121">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input name="txtEmail" type="text" class="textboxsmall" /></td>
+                <td>
+                    <label>
+                        <input name="txtPassword" type="password" class="textboxsmall" />
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input name="Submit" type="submit" class="smallbutton" value="Login" />
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><a href="/forgotpassword.html">Forgot Password?</a> </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+</div>
